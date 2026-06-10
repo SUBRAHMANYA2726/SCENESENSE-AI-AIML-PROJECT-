@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+python-multipart
+sqlalchemy
+pydantic
+pydantic-settings
+opencv-python-headless
+pandas
+scikit-learn
+langchain
+langchain-community
+faiss-cpu
+transformers
+pypdf2
+python-dotenv
