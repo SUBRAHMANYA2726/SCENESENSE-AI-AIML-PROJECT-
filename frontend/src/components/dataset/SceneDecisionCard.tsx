@@ -18,6 +18,7 @@ interface SceneDecisionCardProps {
 const SCENE_ICONS: Record<string, React.ReactNode> = {
   MOUNTAIN:  <Mountain size={28} className="text-blue-300" />,
   BEACH:     <Waves size={28} className="text-cyan-300" />,
+  SEA:       <Waves size={28} className="text-cyan-300" />,
   BUILDINGS: <Building2 size={28} className="text-yellow-300" />,
   GLACIER:   <Snowflake size={28} className="text-sky-300" />,
   FOREST:    <Trees size={28} className="text-green-300" />,
@@ -27,6 +28,7 @@ const SCENE_ICONS: Record<string, React.ReactNode> = {
 const SCENE_COLORS: Record<string, string> = {
   MOUNTAIN:  '#60a5fa',
   BEACH:     '#22d3ee',
+  SEA:       '#22d3ee',
   BUILDINGS: '#fbbf24',
   GLACIER:   '#7dd3fc',
   FOREST:    '#4ade80',
