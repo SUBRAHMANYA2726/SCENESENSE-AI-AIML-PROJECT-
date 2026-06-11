@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
-
-const inter = Inter({ subsets: ["latin"] });
+import { ChatProvider } from "@/context/ChatContext";
+import { MainLayout } from "@/components/layout/MainLayout";
 
 export const metadata: Metadata = {
   title: "SceneSense AI Platform",
@@ -17,9 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className="antialiased font-sans">
         <ThemeProvider>
-          {children}
+          <ChatProvider>
+            <MainLayout>
+              {children}
+            </MainLayout>
+          </ChatProvider>
         </ThemeProvider>
       </body>
     </html>

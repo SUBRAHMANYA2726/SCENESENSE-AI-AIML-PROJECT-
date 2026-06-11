@@ -1,10 +1,9 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api import endpoints
-from dotenv import load_dotenv
-
-load_dotenv()
-
 app = FastAPI(
     title="SceneSense AI Decision Intelligence Platform",
     description="Next-generation AI Decision Intelligence Chatbot Platform API",

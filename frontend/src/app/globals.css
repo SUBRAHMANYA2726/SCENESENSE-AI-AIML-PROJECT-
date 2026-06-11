@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -93,6 +94,7 @@
     color: var(--foreground);
     transition: background-color 0.5s ease, color 0.5s ease;
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Inter', sans-serif;
   }
 }
 
@@ -140,4 +142,32 @@
 
 @keyframes rotate {
   100% { transform: rotate(360deg); }
+}
+
+/* Gemini-inspired Animated Gradients */
+.gemini-gradient-bg {
+  background: linear-gradient(270deg, #3b82f6, #a855f7, #ef4444, #f59e0b);
+  background-size: 300% 300%;
+  animation: gradientFlow 4s ease infinite;
+}
+
+.gemini-gradient-border {
+  position: relative;
+}
+
+.gemini-gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(270deg, #3b82f6, #a855f7, #ef4444, #f59e0b);
+  background-size: 300% 300%;
+  animation: gradientFlow 4s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
